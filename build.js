@@ -2,4 +2,4 @@
 
 const gulpfile = require('./gulpfile.js');
 
-gulpfile.sass();
+gulpfile.default();
