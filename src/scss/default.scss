@@ -106,41 +106,54 @@ body{
 		}
 
 		#content{
-			.new-trial-desc, .new-trial-code{
+
+			#new-form{
 				display: flex;
-			}
-
-			.new-trial-meta .input-div{
-				margin-bottom: 1em;
-				textarea{
-					height: 100px;
-				}
-				&:last-child{
-					margin: 0;
-				}
-			}
-
-			.new-trial-html textarea{
+				flex-direction: column;
 				height: 100%;
-			}
 
-			.new-trial-code{
-				margin: 0 1em;
-				border-top: 1px solid $border-color;
-				textarea{
-					font-size: .9em;
+				.new-trial-desc{
+					max-height: 176px;
 				}
-				& div:first-child{
-					padding-left: 0;
-				}
-				& div:last-child{
-					padding-right: 0;
-				}
-			}
 
-			.new-trial-meta, .new-trial-html, .new-trial-left, .new-trial-right{
-				flex: 1;
-				padding: 1em;
+				.new-trial-desc, .new-trial-code{
+					display: flex;
+					flex: 1;
+				}
+
+				.new-trial-meta .input-div{
+					margin-bottom: 1em;
+					textarea{
+						height: 100px;
+					}
+					&:last-child{
+						margin: 0;
+					}
+				}
+
+				.new-trial-html textarea{
+					height: 100%;
+				}
+
+				.new-trial-code{
+					margin: 0 1em;
+					border-top: 1px solid $border-color;
+					textarea{
+						font-size: .9em;
+						height: 100%;
+					}
+					& div:first-child{
+						padding-left: 0;
+					}
+					& div:last-child{
+						padding-right: 0;
+					}
+				}
+
+				.new-trial-meta, .new-trial-html, .new-trial-left, .new-trial-right{
+					flex: 1;
+					padding: 1em;
+				}
 			}
 
 		}
