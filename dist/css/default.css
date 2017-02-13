@@ -19,6 +19,8 @@ body {
     resize: none; }
     body input:focus, body button:focus, body textarea:focus {
       border-color: #F78C6A; }
+  body .hide {
+    display: none !important; }
   body #top {
     position: fixed;
     top: 0;
@@ -26,12 +28,21 @@ body {
     background-color: #282c34;
     z-index: 1;
     border-bottom: 1px solid #30343c;
-    padding: 1.5em;
     height: 50px;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    display: flex; }
     body #top h1 {
       font-size: 1em;
-      margin: 0; }
+      margin: 0;
+      padding: 1.5em;
+      flex: 1; }
+    body #top #save-and-run {
+      flex: 0;
+      min-width: 100px;
+      background-color: #89DDF3;
+      color: #282c34;
+      padding: 0;
+      margin: 1em 2em 1em 1em; }
   body #body {
     display: flex;
     position: absolute;
@@ -55,7 +66,7 @@ body {
           font-weight: bold;
           color: #F78C6A;
           cursor: pointer; }
-          body #body #sidebar .sidebar-title #new-trial:hover {
+          body #body #sidebar .sidebar-title #new-trial:hover, body #body #sidebar .sidebar-title #new-trial.active {
             text-decoration: underline; }
     body #body #content .new-trial-desc, body #body #content .new-trial-code {
       display: flex; }

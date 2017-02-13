@@ -22,6 +22,7 @@ const gulp = require('gulp'),
 
 		  js: function(){
 			  // TODO: Minify here too
+			  console.log('js');
 			  return gulp.src(clientJsPath, {base: './src/js/client'})
 			  .pipe(gulp.dest(clientJsOutput));
 		  }

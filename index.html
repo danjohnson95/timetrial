@@ -8,6 +8,7 @@
 	<body>
 		<div id="top">
 	    	<h1>&gt; timetrial</h1>
+			<button id="save-and-run" class="hide">Save &amp; Run</button>
 		</div>
 		<div id="body">
 			<div id="sidebar">
@@ -20,31 +21,36 @@
 			</div>
 			<div id="content">
 
-				<div class="new-trial-desc">
-					<div class="new-trial-meta">
-						<div class="input-div">
-							<input type="text" placeholder="Trial title">
+				<div id="new-form" class="hide">
+					<div class="new-trial-desc">
+						<div class="new-trial-meta">
+							<div class="input-div">
+								<input type="text" placeholder="Trial title">
+							</div>
+							<div class="input-div">
+								<textarea placeholder="Trial description"></textarea>
+							</div>
 						</div>
-						<div class="input-div">
-							<textarea placeholder="Trial description"></textarea>
+						<div class="new-trial-html">
+							<textarea placeholder="Trial HTML setup"></textarea>
 						</div>
 					</div>
-					<div class="new-trial-html">
-						<textarea placeholder="Trial HTML setup"></textarea>
-					</div>
-				</div>
 
-				<div class="new-trial-code">
-					<div class="new-trial-left">
-						<textarea placeholder="First test case"></textarea>
-					</div>
-					<div class="new-trial-right">
-						<textarea placeholder="Second test case"></textarea>
+					<div class="new-trial-code">
+						<div class="new-trial-left">
+							<textarea placeholder="First test case"></textarea>
+						</div>
+						<div class="new-trial-right">
+							<textarea placeholder="Second test case"></textarea>
+						</div>
 					</div>
 				</div>
 
 			</div>
 		</div>
+
+		<script src="./dist/js/newtrial.js"></script>
+
 	</body>
 
 </html>
