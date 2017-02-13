@@ -1,5 +1,6 @@
 const validate = require('./src/js/validate.js');
 const {ipcRenderer} = require('electron');
+const trialer = require('./src/js/trialer.js');
 
 const obj = {
 
@@ -69,6 +70,7 @@ const obj = {
 			if(!passed) return obj.handleErrors(errors);
 			var newexisting = "new";
 			ipcRenderer.send('saveandrun', {status: newexisting, values: values});
+			ipcRenderer.send('start', {code_1: values.code_1, code_2: values.code_2});
 		});
 	}
 

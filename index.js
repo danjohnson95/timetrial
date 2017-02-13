@@ -3,6 +3,7 @@ const path = require('path');
 const url = require('url');
 const api = require('./src/js/api.js');
 const {ipcMain} = require('electron');
+const timeTrial = require('./src/js/trialer');
 
 let win;
 
@@ -43,4 +44,8 @@ app.on('activate', () => {
 
 ipcMain.on('saveandrun', function(e, obj){
 	console.log(obj);
+});
+
+ipcMain.on('start', function(e, obj){
+	timeTrial.init(obj.code_1, obj.code_2);
 });
