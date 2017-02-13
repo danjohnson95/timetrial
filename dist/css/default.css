@@ -1,0 +1,29 @@
+body {
+  font-family: "Consolas", "Menlo", monospace;
+  font-size: 0.75rem;
+  background-color: #282c34;
+  color: #abb2bf;
+  margin: 0;
+  -webkit-font-smoothing: antialiased; }
+  body #top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #282c34;
+    z-index: 1;
+    border-bottom: 1px solid #30343c;
+    padding: 1.5em; }
+    body #top h1 {
+      font-size: 1em;
+      margin: 0; }
+  body #body {
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0; }
+    body #body #sidebar, body #body #content {
+      flex: 1; }
+    body #body #sidebar {
+      max-width: 250px;
+      border-right: 1px solid #30343c; }

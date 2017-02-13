@@ -1,0 +1,50 @@
+$font-family: 'Consolas', 'Menlo', monospace;
+$font-size: 0.75rem;
+$background-color: #282c34;
+$body-color: #abb2bf;
+$border-color: #30343c;
+$sidebar-width: 250px;
+
+
+body{
+	font-family: $font-family;
+    font-size: $font-size;
+	background-color: $background-color;
+	color: $body-color;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+
+	#top{
+		position: fixed;
+		top: 0;
+		width: 100%;
+		background-color: $background-color;
+		z-index: 1;
+		border-bottom: 1px solid $border-color;
+		padding: 1.5em;
+		h1{
+			font-size: 1em;
+			margin: 0;
+		}
+	}
+
+	#body{
+
+		display: flex;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		top: 0;
+
+		#sidebar, #content{
+			flex: 1;
+		}
+
+		#sidebar{
+			max-width: $sidebar-width;
+			border-right: 1px solid $border-color;
+		}
+
+	}
+
+}
