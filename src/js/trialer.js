@@ -12,9 +12,9 @@ var obj = {
 			'onCycle': obj.cycle,
 			'onError': obj.error,
 			'onComplete': obj.finished
-		}).add('test1', function(){
+		}).add('test_1', function(){
 			eval(vals.code_1);
-		}).add('test2', function(){
+		}).add('test_2', function(){
 			eval(vals.code_2);
 		}).run({'async': true});
 	},
@@ -33,7 +33,12 @@ var obj = {
 	},
 
 	finished: function(){
-		obj.socket.send('finished', this.filter('fastest').map('name'));
+		if(this.filter('fastest').map('name').length){
+			obj.socket.send('finished', this.filter('fastest').map('name'));
+		}else{
+			obj.error(null);
+		}
+
 	}
 
 };

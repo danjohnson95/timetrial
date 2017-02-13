@@ -17,6 +17,7 @@ const obj = {
 		this.elements.addbtn = document.getElementById('new-trial');
 		this.elements.newform = document.getElementById('new-form');
 		this.elements.saverun = document.getElementById('save-and-run');
+		this.elements.mainstatus = this.elements.newform.querySelector('.main-status');
 
 		this.elements.form.name = this.elements.newform.querySelector('input[name=name]');
 		this.elements.form.description = this.elements.newform.querySelector('textarea[name=description]');
@@ -80,15 +81,14 @@ const obj = {
 obj.init();
 
 ipcRenderer.on('started', function(){
-	console.log('started');
+	obj.elements.mainstatus.innerHTML = "Status: Running...";
 });
 
 ipcRenderer.on('error', function(e, error){
-	console.log('error');
+	obj.elements.mainstatus.innerHTML = "Status: Error";
 	console.log(error);
 });
 
 ipcRenderer.on('finished', function(e, fastest){
-	console.log('finished');
-	console.log(fastest);
+	obj.elements.mainstatus.innerHTML = "Status: Completed, "+fastest+" was quicker";
 });

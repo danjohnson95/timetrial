@@ -6,11 +6,11 @@
 	</head>
 
 	<body>
-		<div id="top">
+		<div id="top" class="flex">
 	    	<h1>&gt; timetrial</h1>
 			<button id="save-and-run" class="hide">Save &amp; Run</button>
 		</div>
-		<div id="body">
+		<div id="body" class="flex">
 			<div id="sidebar">
 				<div class="sidebar-title">
 					Existing Trials
@@ -21,8 +21,8 @@
 			</div>
 			<div id="content">
 
-				<div id="new-form" class="hide">
-					<div class="new-trial-desc">
+				<div id="new-form" class="flex hide">
+					<div class="new-trial-desc flex">
 						<div class="new-trial-meta">
 							<div class="input-div">
 								<input type="text" name="name" placeholder="Trial title">
@@ -31,12 +31,21 @@
 								<textarea name="description" placeholder="Trial description"></textarea>
 							</div>
 						</div>
+
 						<div class="new-trial-html">
 							<textarea name="html" placeholder="Trial HTML setup"></textarea>
 						</div>
 					</div>
 
-					<div class="new-trial-code">
+					<div class="new-trial-status">
+						<div class="main-status">Status: Idle</div>
+						<div class="flex">
+							<div class="code-status"></div>
+							<div class="code-status"></div>
+						</div>
+					</div>
+
+					<div class="new-trial-code flex">
 						<div class="new-trial-left">
 							<textarea name="code_1" placeholder="First test case"></textarea>
 						</div>

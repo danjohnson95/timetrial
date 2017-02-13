@@ -21,6 +21,8 @@ body {
       border-color: #F78C6A; }
     body input.error, body button.error, body textarea.error {
       border-color: #F07178; }
+  body .flex {
+    display: flex; }
   body .hide {
     display: none !important; }
   body #top {
@@ -31,8 +33,7 @@ body {
     z-index: 1;
     border-bottom: 1px solid #30343c;
     height: 50px;
-    box-sizing: border-box;
-    display: flex; }
+    box-sizing: border-box; }
     body #top h1 {
       font-size: 1em;
       margin: 0;
@@ -46,7 +47,6 @@ body {
       padding: 0;
       margin: 1em 2em 1em 1em; }
   body #body {
-    display: flex;
     position: absolute;
     height: 100%;
     width: 100%;
@@ -56,7 +56,7 @@ body {
       flex: 1;
       padding: 65px 1em 1em 1em; }
     body #body #sidebar {
-      max-width: 250px;
+      max-width: 220px;
       border-right: 1px solid #30343c; }
       body #body #sidebar .sidebar-title {
         text-transform: uppercase;
@@ -71,13 +71,17 @@ body {
           body #body #sidebar .sidebar-title #new-trial:hover, body #body #sidebar .sidebar-title #new-trial.active {
             text-decoration: underline; }
     body #body #content #new-form {
-      display: flex;
       flex-direction: column;
       height: 100%; }
+      body #body #content #new-form .new-trial-status {
+        margin: 1em;
+        padding: 1em 0;
+        border-top: 1px solid #30343c;
+        border-bottom: 1px solid #30343c;
+        text-align: center; }
       body #body #content #new-form .new-trial-desc {
         max-height: 176px; }
       body #body #content #new-form .new-trial-desc, body #body #content #new-form .new-trial-code {
-        display: flex;
         flex: 1; }
       body #body #content #new-form .new-trial-meta .input-div {
         margin-bottom: 1em; }
@@ -87,16 +91,9 @@ body {
           margin: 0; }
       body #body #content #new-form .new-trial-html textarea {
         height: 100%; }
-      body #body #content #new-form .new-trial-code {
-        margin: 0 1em;
-        border-top: 1px solid #30343c; }
-        body #body #content #new-form .new-trial-code textarea {
-          font-size: .9em;
-          height: 100%; }
-        body #body #content #new-form .new-trial-code div:first-child {
-          padding-left: 0; }
-        body #body #content #new-form .new-trial-code div:last-child {
-          padding-right: 0; }
+      body #body #content #new-form .new-trial-code textarea {
+        font-size: .9em;
+        height: 100%; }
       body #body #content #new-form .new-trial-meta, body #body #content #new-form .new-trial-html, body #body #content #new-form .new-trial-left, body #body #content #new-form .new-trial-right {
         flex: 1;
         padding: 1em; }
