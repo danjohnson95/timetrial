@@ -23,7 +23,9 @@ body {
     width: 100%;
     top: 0; }
     body #body #sidebar, body #body #content {
-      flex: 1; }
+      box-sizing: border-box;
+      flex: 1;
+      padding: 50px 1em 1em 1em; }
     body #body #sidebar {
       max-width: 250px;
       border-right: 1px solid #30343c; }
