@@ -8,7 +8,7 @@ const timeTrial = require('./src/js/trialer');
 let win;
 
 function createWindow(){
-    win = new BrowserWindow({width: 800, height: 700});
+    win = new BrowserWindow({width: 1200, height: 780});
 
     win.loadURL(url.format({
         pathname: path.join(__dirname, 'index.html'),
@@ -47,5 +47,5 @@ ipcMain.on('saveandrun', function(e, obj){
 });
 
 ipcMain.on('start', function(e, obj){
-	timeTrial.init(obj.code_1, obj.code_2);
+	timeTrial.init(obj, e.sender);
 });

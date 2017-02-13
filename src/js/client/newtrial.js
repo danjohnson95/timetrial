@@ -78,3 +78,17 @@ const obj = {
 };
 
 obj.init();
+
+ipcRenderer.on('started', function(){
+	console.log('started');
+});
+
+ipcRenderer.on('error', function(e, error){
+	console.log('error');
+	console.log(error);
+});
+
+ipcRenderer.on('finished', function(e, fastest){
+	console.log('finished');
+	console.log(fastest);
+});
