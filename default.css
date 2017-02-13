@@ -1,0 +1,30 @@
+body{
+	font-family:'Consolas';
+    font-size: 0.75rem;
+	background-color: #282c34;
+	color: #abb2bf;
+	margin: 0;
+}
+
+h1{
+	font-size: 1em;
+	border-bottom: 1px solid #30343c;
+	margin: 0;
+	padding: 1.5em;
+}
+
+#body{
+	display: flex;
+	position: absolute;
+	height: 100%;
+	top: 0;
+}
+
+#body #sidebar, #body #content{
+	flex: 1;
+}
+
+#body #sidebar{
+	max-width: 250px;
+	border-right: 1px solid #30343c;
+}

@@ -1,0 +1,16 @@
+{
+  "name": "timetrial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dan Johnson <dan@danj.eu>",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^1.4.15",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
+  }
+}
