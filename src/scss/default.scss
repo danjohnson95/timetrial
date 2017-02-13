@@ -1,9 +1,13 @@
 $font-family: 'Consolas', 'Menlo', monospace;
 $font-size: 0.75rem;
 $background-color: #282c34;
-$body-color: #abb2bf;
+$body-color: #B2CCD6;
 $border-color: #30343c;
 $sidebar-width: 250px;
+
+$white-color: #EEFFFF;
+$comment-color: #545a63;
+$orange-color: #F78C6A;
 
 
 body{
@@ -14,6 +18,24 @@ body{
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
 
+	input, button, textarea{
+		font-family: $font-family;
+		font-size: $font-size;
+		border: 1px solid transparent;
+		-webkit-font-smoothing: antialiased;
+		width: 100%;
+		padding: 1em;
+		box-sizing: border-box;
+		background-color: rgba(255,255,255,0.05);
+		outline: 0;
+		color: #EEFFFF;
+		resize: none;
+		&:focus{
+			border-color: $orange-color;
+		}
+
+	}
+
 	#top{
 		position: fixed;
 		top: 0;
@@ -22,6 +44,8 @@ body{
 		z-index: 1;
 		border-bottom: 1px solid $border-color;
 		padding: 1.5em;
+		height: 50px;
+		box-sizing: border-box;
 		h1{
 			font-size: 1em;
 			margin: 0;
@@ -39,12 +63,68 @@ body{
 		#sidebar, #content{
 			box-sizing: border-box;
 			flex: 1;
-			padding: 50px 1em 1em 1em;
+			padding: 65px 1em 1em 1em;
 		}
 
 		#sidebar{
 			max-width: $sidebar-width;
 			border-right: 1px solid $border-color;
+
+			.sidebar-title{
+				text-transform: uppercase;
+				color: $comment-color;
+				font-weight: bold;
+				font-size: .9em;
+				#new-trial{
+					float: right;
+					font-weight: bold;
+					color: $orange-color;
+					cursor: pointer;
+					&:hover{
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+
+		#content{
+			.new-trial-desc, .new-trial-code{
+				display: flex;
+			}
+
+			.new-trial-meta .input-div{
+				margin-bottom: 1em;
+				textarea{
+					height: 100px;
+				}
+				&:last-child{
+					margin: 0;
+				}
+			}
+
+			.new-trial-html textarea{
+				height: 100%;
+			}
+
+			.new-trial-code{
+				margin: 0 1em;
+				border-top: 1px solid $border-color;
+				textarea{
+					font-size: .9em;
+				}
+				& div:first-child{
+					padding-left: 0;
+				}
+				& div:last-child{
+					padding-right: 0;
+				}
+			}
+
+			.new-trial-meta, .new-trial-html, .new-trial-left, .new-trial-right{
+				flex: 1;
+				padding: 1em;
+			}
+
 		}
 
 	}

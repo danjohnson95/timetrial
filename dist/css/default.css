@@ -2,9 +2,23 @@ body {
   font-family: "Consolas", "Menlo", monospace;
   font-size: 0.75rem;
   background-color: #282c34;
-  color: #abb2bf;
+  color: #B2CCD6;
   margin: 0;
   -webkit-font-smoothing: antialiased; }
+  body input, body button, body textarea {
+    font-family: "Consolas", "Menlo", monospace;
+    font-size: 0.75rem;
+    border: 1px solid transparent;
+    -webkit-font-smoothing: antialiased;
+    width: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.05);
+    outline: 0;
+    color: #EEFFFF;
+    resize: none; }
+    body input:focus, body button:focus, body textarea:focus {
+      border-color: #F78C6A; }
   body #top {
     position: fixed;
     top: 0;
@@ -12,7 +26,9 @@ body {
     background-color: #282c34;
     z-index: 1;
     border-bottom: 1px solid #30343c;
-    padding: 1.5em; }
+    padding: 1.5em;
+    height: 50px;
+    box-sizing: border-box; }
     body #top h1 {
       font-size: 1em;
       margin: 0; }
@@ -25,7 +41,41 @@ body {
     body #body #sidebar, body #body #content {
       box-sizing: border-box;
       flex: 1;
-      padding: 50px 1em 1em 1em; }
+      padding: 65px 1em 1em 1em; }
     body #body #sidebar {
       max-width: 250px;
       border-right: 1px solid #30343c; }
+      body #body #sidebar .sidebar-title {
+        text-transform: uppercase;
+        color: #545a63;
+        font-weight: bold;
+        font-size: .9em; }
+        body #body #sidebar .sidebar-title #new-trial {
+          float: right;
+          font-weight: bold;
+          color: #F78C6A;
+          cursor: pointer; }
+          body #body #sidebar .sidebar-title #new-trial:hover {
+            text-decoration: underline; }
+    body #body #content .new-trial-desc, body #body #content .new-trial-code {
+      display: flex; }
+    body #body #content .new-trial-meta .input-div {
+      margin-bottom: 1em; }
+      body #body #content .new-trial-meta .input-div textarea {
+        height: 100px; }
+      body #body #content .new-trial-meta .input-div:last-child {
+        margin: 0; }
+    body #body #content .new-trial-html textarea {
+      height: 100%; }
+    body #body #content .new-trial-code {
+      margin: 0 1em;
+      border-top: 1px solid #30343c; }
+      body #body #content .new-trial-code textarea {
+        font-size: .9em; }
+      body #body #content .new-trial-code div:first-child {
+        padding-left: 0; }
+      body #body #content .new-trial-code div:last-child {
+        padding-right: 0; }
+    body #body #content .new-trial-meta, body #body #content .new-trial-html, body #body #content .new-trial-left, body #body #content .new-trial-right {
+      flex: 1;
+      padding: 1em; }
