@@ -19,6 +19,8 @@ body {
     resize: none; }
     body input:focus, body button:focus, body textarea:focus {
       border-color: #F78C6A; }
+    body input.error, body button.error, body textarea.error {
+      border-color: #F07178; }
   body .hide {
     display: none !important; }
   body #top {

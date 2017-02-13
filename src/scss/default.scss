@@ -9,7 +9,7 @@ $white-color: #EEFFFF;
 $comment-color: #545a63;
 $orange-color: #F78C6A;
 $blue-color: #89DDF3;
-
+$red-color: #F07178;
 
 body{
 	font-family: $font-family;
@@ -33,6 +33,9 @@ body{
 		resize: none;
 		&:focus{
 			border-color: $orange-color;
+		}
+		&.error{
+			border-color: $red-color;
 		}
 
 	}
