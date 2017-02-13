@@ -1,7 +1,8 @@
 const {app, BrowserWindow} = require('electron');
 const path = require('path');
 const url = require('url');
-const api = require('./src/js/api.js')
+const api = require('./src/js/api.js');
+const {ipcMain} = require('electron');
 
 let win;
 
@@ -37,4 +38,9 @@ app.on('activate', () => {
     if(win === null){
         createWindow()
     }
+});
+
+
+ipcMain.on('saveandrun', function(e, obj){
+	console.log(obj);
 });

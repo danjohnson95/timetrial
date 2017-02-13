@@ -1,4 +1,5 @@
 const validate = require('./src/js/validate.js');
+const {ipcRenderer} = require('electron');
 
 const obj = {
 
@@ -47,10 +48,9 @@ const obj = {
 	},
 
 	handleErrors: function(errors){
-		console.log(errors);
 		errors.forEach(function(e){
 			obj.elements.form[e.field].classList.add('error');
-
+			// TODO: Also output errors as text
 		});
 	},
 
@@ -66,11 +66,12 @@ const obj = {
 		obj.resetErrors();
 		var values = obj.getValues();
 		validate.trial(values, function(passed, errors){
-			console.log(passed);
 			if(!passed) return obj.handleErrors(errors);
-			console.log('passed?');
+			var newexisting = "new";
+			ipcRenderer.send('saveandrun', {status: newexisting, values: values});
 		});
 	}
+
 
 };
 
