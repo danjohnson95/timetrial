@@ -1,7 +1,7 @@
 # timetrial
 A native app used for benchmarking JavaScript snippets.
 
----
+![Screenshot](/screenshot.png)
 
 Ever found yourself wondering which way would be more efficient, but don't want to waste time writing your own test suite?
 
